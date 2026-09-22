@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalCommands = {
         help: 'Available commands:\n  about     - Brief biography\n  skills    - Core technical competencies\n  projects  - Highlighted project summary\n  contact   - Get email, phone, and links\n  clear     - Clean the screen',
         about: 'Talak Patel | Web Frontend Engineer @ Canonical\n-----------------------------------------------\nBSc Software Engineering graduate from USIU-Africa.\nFocused on building responsive, highly accessible interfaces for the Ubuntu-ecosystem.\nPassionate about React/Next.js, performance optimization, and clean fintech-grade integrations.',
-        skills: 'Technical Skills:\n  - Frontend & Mobile: iOS (Swift), Flutter, Next.js, React.js, JavaScript, WordPress\n  - Backend/DB: Python, SQL, REST APIs, Supabase, Firebase\n  - Integrations: M-Pesa Daraja API, FinTech Security, Vercel, Stripe\n  - Tools: Xcode, GitHub Copilot, OpenAI API, Asana, Jira',
-        projects: 'Highlighted Projects:\n  - Zenka Loan App iOS (Contract Shipped) - Native FinTech app with Android parity\n  - Kinetic Claims (Launching Nov 2026) - Insurance claims management platform\n  - Saikan Cleaning App (Launching Jan 2027) - Flutter booking application\n  - dplfestive.com (Active Maintenance) - Events platform\n  - afriqueexplorer.com (Active Maintenance) - Supabase travel platform\n  Run command "projects" or click on the Portfolio section below to see details!',
+        skills: 'Technical Skills:\n  - Frontend & Mobile: Flutter, Dart, iOS, Next.js, React.js, JavaScript, WordPress\n  - Backend/DB: Python, SQL, REST APIs, Supabase, Firebase\n  - Integrations: M-Pesa Daraja API, FinTech Security, Vercel, Stripe\n  - Tools: Xcode, Android Studio, GitHub Copilot, OpenAI API, Asana, Jira',
+        projects: 'Highlighted Projects:\n  - Zenka Loan App iOS (Contract Shipped) - Flutter FinTech app with Android parity\n  - Kinetic Claims (Launching Nov 2026) - Insurance claims management platform\n  - Saikan Cleaning App (Launching Jan 2027) - Flutter booking application\n  - dplfestive.com (Active Maintenance) - Events platform\n  - afriqueexplorer.com (Active Maintenance) - Supabase travel platform\n  Run command "projects" or click on the Portfolio section below to see details!',
         contact: 'Get in Touch:\n  - Email: talakp39@gmail.com\n  - Phone: +254 715 591 405 / +254 737 470 584\n  - Location: Nairobi, Kenya (Remote availability)\n  - Swahili/English/Hindi bilingual support.'
     };
 
@@ -217,10 +217,10 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Zenka Loan App (iOS)',
             status: 'Completed (Contract Handover)',
             statusClass: 'status-completed',
-            tech: ['Swift', 'iOS SDK', 'RESTful APIs', 'FinTech Security', 'M-Pesa API', 'Android Parity', 'Knowledge Transfer'],
-            desc: 'Contracted to develop the official Zenka Loan application for iOS from A to Z, achieving 100% feature and workflow parity with their flagship Android application. Conducted comprehensive technical training and documentation for the internal team taking over.',
+            tech: ['Flutter', 'Dart', 'iOS', 'RESTful APIs', 'FinTech Security', 'M-Pesa API', 'Android Parity', 'Knowledge Transfer'],
+            desc: 'Contracted to develop the official Zenka Loan application for iOS from A to Z using Flutter, achieving 100% feature and workflow parity with their flagship Android application. Conducted comprehensive technical training and documentation for the internal team taking over.',
             features: [
-                'Architected and engineered the native iOS app from scratch to production with 100% Android feature parity',
+                'Architected and engineered the iOS app using Flutter from scratch to production with 100% Android feature parity',
                 'Built end-to-end loan application lifecycle: loan amount calculators, KYC validation, credit evaluation, and instant disbursement',
                 'Integrated secure Safaricom M-Pesa Daraja repayment APIs with automated callback verification and balance reconciliation',
                 'Implemented bank-grade client security, biometrics (Face ID / Touch ID), encrypted token management, and secure API handshakes',
@@ -383,8 +383,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const valToCopy = btn.getAttribute('data-copy');
             navigator.clipboard.writeText(valToCopy).then(() => {
                 const origText = btn.innerHTML;
-                btn.innerHTML = '✓ Copied!';
-                btn.style.color = '#10b981';
+                const checkIcon = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                btn.innerHTML = `${checkIcon} Copied!`;
+                btn.style.color = '#059669';
                 setTimeout(() => {
                     btn.innerHTML = origText;
                     btn.style.color = '';
@@ -423,9 +424,10 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => response.json())
             .then(data => {
-                submitBtn.innerHTML = '✓ Message Sent!';
-                submitBtn.style.background = '#10b981';
-                submitBtn.style.boxShadow = '0 4px 15px rgba(16, 185, 129, 0.2)';
+                const checkIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                submitBtn.innerHTML = `${checkIcon} Message Sent!`;
+                submitBtn.style.background = '#059669';
+                submitBtn.style.boxShadow = '0 4px 15px rgba(5, 150, 105, 0.25)';
                 contactForm.reset();
                 
                 setTimeout(() => {
@@ -437,8 +439,9 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
                 console.error('Error submitting form:', error);
-                submitBtn.innerHTML = '✗ Error Sending';
-                submitBtn.style.background = '#ef4444';
+                const errorIcon = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block; vertical-align:middle; margin-right:6px;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>';
+                submitBtn.innerHTML = `${errorIcon} Error Sending`;
+                submitBtn.style.background = '#dc2626';
                 
                 setTimeout(() => {
                     submitBtn.disabled = false;
