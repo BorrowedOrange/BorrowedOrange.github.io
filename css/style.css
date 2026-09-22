@@ -846,33 +846,6 @@ a.contact-method-val:hover {
     align-items: center;
 }
 
-.project-icon-wrapper {
-    width: 42px;
-    height: 42px;
-    border-radius: 10px;
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent-primary);
-    transition: all var(--transition-fast);
-}
-
-.project-icon-wrapper svg {
-    width: 22px;
-    height: 22px;
-    stroke: currentColor;
-    stroke-width: 2;
-    fill: none;
-    transition: transform var(--transition-fast);
-}
-
-.project-card:hover .project-icon-wrapper {
-    border-color: var(--accent-primary);
-    transform: scale(1.05);
-    background: var(--accent-glow);
-}
 
 .project-status {
     font-size: 0.75rem;
