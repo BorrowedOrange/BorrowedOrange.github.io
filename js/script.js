@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminalCommands = {
         help: 'Available commands:\n  about     - Brief biography\n  skills    - Core technical competencies\n  projects  - Highlighted project summary\n  contact   - Get email, phone, and links\n  clear     - Clean the screen',
         about: 'Talak Patel | Web Frontend Engineer @ Canonical\n-----------------------------------------------\nBSc Software Engineering graduate from USIU-Africa.\nFocused on building responsive, highly accessible interfaces for the Ubuntu-ecosystem.\nPassionate about React/Next.js, performance optimization, and clean fintech-grade integrations.',
-        skills: 'Technical Skills:\n  - Frontend: Next.js, React.js, JavaScript, WordPress\n  - Backend/DB: Python, SQL, REST APIs, Supabase, Firebase\n  - Integrations: M-Pesa Daraja API, Vercel, Stripe\n  - Tools: GitHub Copilot, OpenAI API, Asana, Jira',
-        projects: 'Highlighted Projects:\n  - dplfestive.com (Active Maintenance) - Events platform\n  - wealthwaveinstitute.com (Active Maintenance) - FinTech Education\n  - afriqueexplorer.com (Active Maintenance) - Supabase travel platform\n  - Saikan Cleaning App (In Progress) - Flutter Booking application\n  Run command "projects" or click on the Portfolio section below to see details!',
+        skills: 'Technical Skills:\n  - Frontend & Mobile: iOS (Swift), Flutter, Next.js, React.js, JavaScript, WordPress\n  - Backend/DB: Python, SQL, REST APIs, Supabase, Firebase\n  - Integrations: M-Pesa Daraja API, FinTech Security, Vercel, Stripe\n  - Tools: Xcode, GitHub Copilot, OpenAI API, Asana, Jira',
+        projects: 'Highlighted Projects:\n  - Zenka Loan App iOS (Contract Shipped) - Native FinTech app with Android parity\n  - Kinetic Claims (Launching Nov 2026) - Insurance claims management platform\n  - Saikan Cleaning App (Launching Jan 2027) - Flutter booking application\n  - dplfestive.com (Active Maintenance) - Events platform\n  - afriqueexplorer.com (Active Maintenance) - Supabase travel platform\n  Run command "projects" or click on the Portfolio section below to see details!',
         contact: 'Get in Touch:\n  - Email: talakp39@gmail.com\n  - Phone: +254 715 591 405 / +254 737 470 584\n  - Location: Nairobi, Kenya (Remote availability)\n  - Swahili/English/Hindi bilingual support.'
     };
 
@@ -213,35 +213,21 @@ document.addEventListener('DOMContentLoaded', () => {
             linkText: 'Visit Website',
             url: 'https://robotcafe.co.ke'
         },
-        'wealthwaveinstitute.com': {
-            title: 'wealthwaveinstitute.com',
-            status: 'Active - Monthly Maintenance',
-            statusClass: 'status-maintenance',
-            tech: ['Next.js', 'Supabase PostgreSQL', 'News API', 'M-Pesa Daraja API'],
-            desc: 'A comprehensive financial education and fintech dashboard. Integrates real-time news feeds alongside mobile payments using Safaricom\'s M-Pesa API.',
-            features: [
-                'Secure M-Pesa Daraja C2B/B3C merchant API endpoint pipelines',
-                'Supabase relational schema structure handling user profiles and authentication',
-                'Next.js components for dashboard speeds and page generation',
-                'Live financial ticker news stream updating asynchronously'
-            ],
-            linkText: 'Visit Website',
-            url: 'https://wealthwaveinstitute.com'
-        },
-        'chineselivingroom.com': {
-            title: 'chineselivingroom.com',
-            status: 'Active',
+        'zenka-loan-app': {
+            title: 'Zenka Loan App (iOS)',
+            status: 'Completed (Contract Handover)',
             statusClass: 'status-completed',
-            tech: ['UI/UX Design', 'M-Pesa API', 'Bootstrap', 'Reservation API'],
-            desc: 'End-to-end web deployment for a client looking for a premium dining reservation website. Integrates automated table allocation and mobile payment collections.',
+            tech: ['Swift', 'iOS SDK', 'RESTful APIs', 'FinTech Security', 'M-Pesa API', 'Android Parity', 'Knowledge Transfer'],
+            desc: 'Contracted to develop the official Zenka Loan application for iOS from A to Z, achieving 100% feature and workflow parity with their flagship Android application. Conducted comprehensive technical training and documentation for the internal team taking over.',
             features: [
-                'Custom interactive UI mockup conversion directly to clean HTML/JS code',
-                'Integrated M-Pesa instant payment confirmation callbacks',
-                'E-ticketing table reservation validation at the counter',
-                'Complete SEO optimization raising local search rankings by 40%'
+                'Architected and engineered the native iOS app from scratch to production with 100% Android feature parity',
+                'Built end-to-end loan application lifecycle: loan amount calculators, KYC validation, credit evaluation, and instant disbursement',
+                'Integrated secure Safaricom M-Pesa Daraja repayment APIs with automated callback verification and balance reconciliation',
+                'Implemented bank-grade client security, biometrics (Face ID / Touch ID), encrypted token management, and secure API handshakes',
+                'Conducted structured knowledge-transfer sessions, code walkthroughs, and technical documentation to train the internal engineering team'
             ],
-            linkText: 'Visit Website',
-            url: 'https://chineselivingroom.com'
+            linkText: 'Contract Handover Complete',
+            url: '#'
         },
         'regisrestaurant.co.ke': {
             title: 'regisrestaurant.co.ke',
@@ -258,49 +244,36 @@ document.addEventListener('DOMContentLoaded', () => {
             linkText: 'Visit Website',
             url: 'https://regisrestaurant.co.ke'
         },
-        'tsukutsukumenu.com': {
-            title: 'tsukutsukumenu.com',
-            status: 'Active',
-            statusClass: 'status-completed',
-            tech: ['Mobile First Design', 'Dynamic Menu', 'Vanilla JS', 'Local Storage'],
-            desc: 'Digital, contactless QR code menu platform for instant restaurant menus on guest smartphones.',
-            features: [
-                'Ultra-light code footprint loading in under 400ms',
-                'Mobile-first grid layouts for convenient single-handed usage',
-                'Dynamic filters sorting food dishes by allergies, availability, or ratings',
-                'Zero-dependency build for robust reliability'
-            ],
-            linkText: 'Visit Website',
-            url: 'https://tsukutsukumenu.com'
-        },
         'saikan-cleaning': {
             title: 'Saikan Cleaning Services App',
-            status: 'In Progress',
-            statusClass: 'status-inprogress',
+            status: 'Launching January 2027',
+            statusClass: 'status-upcoming',
             tech: ['Flutter (iOS/Android)', 'Supabase DB', 'Supabase Auth', 'M-Pesa API'],
-            desc: 'A cross-platform mobile booking application for professional cleaning crews, managing schedules, notifications, and client balances in real time.',
+            desc: 'A cross-platform mobile booking application for professional cleaning crews, managing schedules, notifications, and client balances in real time. Official release scheduled for January 2027.',
             features: [
                 'Dynamic booking calendar managing service frequencies (daily, weekly, monthly)',
                 'Supabase Auth and real-time database syncing customer request queues',
                 'Integrated M-Pesa merchant payment status screens',
-                'Nairobi-wide geographic assignment module'
+                'Nairobi-wide geographic assignment module',
+                'Production deployment and app store rollout launching January 2027'
             ],
-            linkText: 'Project Repository / In Progress',
+            linkText: 'Launching January 2027',
             url: '#'
         },
         'kinetic-claims': {
             title: 'Kinetic Claims',
-            status: 'In Progress',
-            statusClass: 'status-inprogress',
-            tech: ['React / Next.js', 'Supabase', 'API Design', 'File Storage'],
-            desc: 'A high-performance claims management and automated verification portal designed to accelerate insurance workflows.',
+            status: 'Launching November 2026',
+            statusClass: 'status-upcoming',
+            tech: ['Flutter / Web', 'Supabase', 'API Design', 'Document Verification'],
+            desc: 'A high-performance claims management and automated verification portal designed to accelerate insurance workflows. Scheduled for official launch in November 2026.',
             features: [
                 'Optimized insurance claims verification workflow reducing administrative review time',
                 'Supabase Storage document and invoice upload verification pipelines',
                 'Role-based dashboard systems for policyholders, adjusters, and supervisors',
-                'REST API backend communication optimizing database read/write speeds'
+                'REST API backend communication optimizing database read/write speeds',
+                'Scheduled for production launch and client onboarding in November 2026'
             ],
-            linkText: 'In Progress',
+            linkText: 'Launching November 2026',
             url: '#'
         }
     };
